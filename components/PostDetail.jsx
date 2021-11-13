@@ -21,11 +21,11 @@ const PostDetail = ({post}) => {
     
         switch (type) {
             case 'heading-three':
-                return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+                return <h3 key={index} className="text-xl text-regal-blue font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
             case 'paragraph':
-                return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+                return <p key={index} className="mb-8 text-regal-blue">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
             case 'heading-four':
-                return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+                return <h4 key={index} className="text-md text-regal-blue font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
             case 'image':
                 return (
                 <img
@@ -50,11 +50,11 @@ const PostDetail = ({post}) => {
                 <div className = "flex items-center w-full">
                     <div className = "block lg:flex text-center items-center mb-8 w-full">
                         <div className = "flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
-                            <img alt = {post.author.name} height = "30px" width = "30px" className = "align-middle rounded-full" src = {post.author.photo.url} />
-                            <p className = "inline align-middle text-gray-700 ml-2 text-lg">{post.author.name}</p>
+                            <img alt = {post.author.name} className = "align-middle rounded-full h-7 w-7" src = {post.author.photo.url} />
+                            <p className = "inline align-middle text-regal-blue ml-2 text-lg">{post.author.name}</p>
                         </div>
-                        <div className = " font-medium text-gray-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className = " font-medium text-regal-blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-regal-blue hover:text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                             <span>
@@ -63,7 +63,7 @@ const PostDetail = ({post}) => {
                         </div>
                     </div>
                 </div>
-                <h3 className = "mb-8 text-3xl font-semibold text-center lg:text-left">
+                <h3 className = "mb-8 text-3xl font-semibold text-center text-regal-blue lg:text-left">
                     {post.title}
                 </h3>
                 {post.content.raw.children.map((typeObj, index) => {

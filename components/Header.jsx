@@ -8,12 +8,13 @@ const Header = () => {
         getCategories()
             .then((newCategories) => setCategories(newCategories))
     }, [])
+    
     return (
-        <div className = "container mx-auto px-10 mb-8">
-            <div className = "border-b w-full inline-block border-blue-400 py-8">
-                <div className = "md:float-left block">
+        <div className = "container mx-auto px-10 mb-8 lg:w-5/6">
+            <div className = "border-b w-full inline-block border-gold-orange py-8">
+                <div className = " text-center md:float-left block">
                     <Link href = "/">
-                        <span className = "cursor-pointer font-bold text-4xl text-white">
+                        <span className = "cursor-pointer  hover:text-gold-orange font-bold text-4xl text-white">
                             GraphCMS
                         </span>
                     </Link>
