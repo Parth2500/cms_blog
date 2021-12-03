@@ -6,7 +6,8 @@ module.exports = {
     extend: {
       colors: {
         'regal-blue': '#14213d',
-        'gold-orange': '#fca311'
+        'gold-orange': '#fca311',
+        'platinum': '#E5E5E5'
       }
     },
   },

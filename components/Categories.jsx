@@ -15,9 +15,9 @@ const Categories = () => {
             <h3 className = " text-xl mb-8 font-bold text-regal-blue border-b pb-4">
                 Categories
             </h3>
-            {categories.map((category) => (
-                <Link key= {category.slug} href = {'/category/${category.slug}'}>
-                    <span className = "cursor-pointer text-regal-blue hover:text-gold-orange text-lg block pb-3 mb-3">
+            {categories.map((category, index) => (
+                <Link key= {category.slug} href = {`/category/${category.slug}`}>
+                    <span className = {`cursor-pointer ${(index === categories.length - 1) ? 'border-b-0' : 'border-b'} text-regal-blue hover:text-gold-orange text-lg block pb-3 mb-3`}>
                         {category.name}
                     </span>
                 </Link>
